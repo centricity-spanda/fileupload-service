@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.943.0",
+    "@aws-sdk/s3-request-presigner": "^3.943.0",
+    "@azure/storage-blob": "^12.29.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "jest": "^30.2.0",
+    "supertest": "^7.0.0"
+  },
+  "name": "file-upload-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "env-cmd -f .env node index.js",
+    "start:uat": "env-cmd -f .env.uat node index.js",
+    "start:preprod": "env-cmd -f .env.preprod node index.js",
+    "start:prod": "env-cmd -f .env.prod node index.js",
+    "dev": "env-cmd -f .env nodemon index.js",
+    "dev:uat": "env-cmd -f .env.uat nodemon index.js",
+    "dev:preprod": "env-cmd -f .env.preprod nodemon index.js",
+    "dev:prod": "env-cmd -f .env.prod nodemon index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
